@@ -1,0 +1,33 @@
+.brand_initial{
+    text-align: left;
+    font-size: x-large;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #2c414c;
+    background-color: #D9FDE4;
+}
+.brand_container{
+    display: grid;
+    border: 1px solid grey;
+    padding-left: 50px;
+    margin-bottom: 50px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    font-family: Aqleema-Regular;
+}
+
+.brand_container p:hover{
+    color: crimson;
+}
