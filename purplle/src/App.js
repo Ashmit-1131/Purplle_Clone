@@ -1,10 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-    <h1>Purplle Website</h1>
+    <div>
+      <Navbar />
+      {/* <div
+        style={{
+          border: "1px solid red",
+          height: "100vh",
+          backgroundColor: "yellow",
+        }}
+      ></div> */}
     </div>
   );
 }

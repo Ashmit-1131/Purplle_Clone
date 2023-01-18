@@ -1,0 +1,35 @@
+.navl {
+    color: green;
+    text-decoration: none;
+}
+.default{
+    color: aliceblue;
+    text-decoration: none;
+}
+.navwrap{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    top: 0;
+    position: sticky;
+    background-color: white;
+}
+.nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    size: 30px;
+    align-items: center;
+    margin: auto;
+    height: 60px;
+    font-weight: 600;
+    
+}
+.logo{
+    width: 100px;
+}
+.form{
+    height: 250px;
+    
+}
+.search{
+    border: 0px solid red;
+}
