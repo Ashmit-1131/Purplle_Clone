@@ -4,6 +4,7 @@ import "./Brands.css"
 
 const Brands = () => {
   return (
+    <>
     <div>
         <h2 style={{
             textAlign:"center"
@@ -223,6 +224,24 @@ const Brands = () => {
         }
         </div>
     </div>
+    <div className='brands_footer1'>
+        <div className='brands_footer1_item'>
+            <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247950_secure-payment.jpg" alt="img" />
+            <span>100% Secure Payment</span>
+            <p>All major credit & debit cards accepted.</p>
+        </div>
+        <div className='brands_footer1_item'>
+            <img src="https://media6.ppl-media.com/mediafiles/ecomm/home/1499247975_beauty-assistant.jpg" alt="img" />
+            <span>Beauty Assistant</span>
+            <p>Tell me what you are looking for and i will work my magic to help you find your perfect match.</p>
+        </div>
+        <div className='brands_footer1_item'>
+            <img src="	https://media6.ppl-media.com/mediafiles/ecomm/home/1499247997_help-center.jpg" alt="img" />
+            <span>Help Center</span>
+            <p>Got a question? Look no further. Browse FAQs or submit your query.</p>
+        </div>
+    </div>
+    </>
   )
 }
 
