@@ -1,17 +1,16 @@
-.navl {
-    color: green;
-    text-decoration: none;
-}
-.default{
-    color: aliceblue;
-    text-decoration: none;
-}
+
+
 .navwrap{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     top: 0;
     position: sticky;
     background-color: white;
+    cursor: pointer;
+   
+   
 }
+
+
 .nav{
     width: 80%;
     display: flex;
@@ -32,4 +31,71 @@
 }
 .search{
     border: 0px solid red;
+    padding: 200px;
+}
+
+.category:hover{
+    color:blueviolet;
+    /* text-decoration:underline; */
+}
+.makeuphover:hover{
+    cursor: pointer;
+    color: blueviolet;
+}
+.brandstatus{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.brandstatus>p{
+    font-size: 12px;
+    background-color: white;
+    padding: 10px 20px;
+}
+.brandstatus>p:hover{
+    background-color: #36409c;
+}
+.brandstatusImg{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+
+}
+.brandstatusImg>img{
+    width: 100px;
+}
+
+
+/* Media Queries for Midium screen */
+@media all and (min-width:768px) and (max-width:1024px){
+    .navwrap{
+       
+       
+       
+    }
+    
+    
+    
+    .logo{
+        width: 50px;
+    }
+    .form{
+        height: 250px;
+        
+    }
+}
+
+
+
+/* Media Queries for Small screen */
+@media all and (min-width:320px) and (max-width:767px){
+    .navwrap{
+        width: 600px;
+        display: flex;
+       
+       
+    }
+    
 }
