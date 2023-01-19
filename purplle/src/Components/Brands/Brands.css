@@ -3,9 +3,6 @@
     font-size: x-large;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-span{
     height: 60px;
     width: 60px;
     line-height: 60px;
@@ -17,17 +14,107 @@ span{
     font-size: 24px;
     color: #2c414c;
     background-color: #D9FDE4;
+    margin-inline-start: 50px;
 }
+
 .brand_container{
     display: grid;
-    border: 1px solid grey;
+    width: 93%;
+    border: 1px solid #e9eced;
     padding-left: 50px;
+    margin: auto;
     margin-bottom: 50px;
+    line-height: 16px;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
-    font-family: Aqleema-Regular;
+    font-family: 'Aqleema-Regular';
 }
 
 .brand_container p:hover{
     color: crimson;
+}
+.hdng-sub {
+    font-size: 20px;
+    font-family: 'PT Serif New', serif;
+    /* font-weight: bold; */
+    color: #2c414c;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.hdng-sub span {
+    display: inline-block;
+    position: relative;
+}
+
+.hdng-sub .line1 {
+    top: -24px;
+    right: 5px;
+    background-color: rgba(231, 24, 141, 0.2);
+    display: inline-block;
+    height: 70px;
+    width: 1px;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    position: absolute !important;
+}
+
+.hdng-sub .line2 {
+    top: -15px;
+    right: 20px;
+    background-color: rgba(231, 24, 141, 0.2);
+    display: inline-block;
+    height: 70px;
+    width: 1px;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    position: absolute !important;
+}
+
+
+.brands_footer1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #e9eced;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+}
+
+.brands_footer1_item{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e9eced;
+    margin: auto;
+    width: 33.1%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands_footer1_item img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.brands_footer1_item span{
+    font-size: 24px;
+    font-family: 'PT Serif', serif;
+}
+
+@media (max-width: 600px) {
+    .brands_footer1{
+        display: flex;
+        flex-direction: column;
+    }
+    .brand_container{
+        display: flex;
+        flex-direction: column;
+    }
 }

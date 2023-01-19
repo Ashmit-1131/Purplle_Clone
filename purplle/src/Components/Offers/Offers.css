@@ -1,0 +1,27 @@
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading img{
+    width: 958px;
+    height: 102px;
+}
+
+@media (max-width: 600px){
+    .heading{
+        display: flex;
+        margin: auto;
+    }
+    .heading img{
+        width: 550px;
+        height: 50px;
+    }
+    .containerStyles{
+        width: 100%;
+        height: 280px;
+        object-fit: contain;
+        margin: auto;
+    }
+}
