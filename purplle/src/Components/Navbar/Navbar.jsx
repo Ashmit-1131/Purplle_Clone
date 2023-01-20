@@ -44,6 +44,7 @@ import {
   Stack,
   Box,
   Flex,
+  HStack,
 } from "@chakra-ui/react";
 import {
   Drawer,
@@ -78,6 +79,7 @@ import {
   PopoverAnchor,
 } from "@chakra-ui/react";
 
+import {IconButton} from "@chakra-ui/react"
 import {
   faceMakeup,
   lipMakeup,
@@ -95,23 +97,41 @@ import {
 import { useDisclosure } from "@chakra-ui/react";
 import { BsSearch, BsHeart, BsEmojiSmile, BsCart4 } from "react-icons/bs";
 import { RxCross2 } from "react-icons/bs";
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
-  
   const [count, setCount] = React.useState(0);
+  const [query, setQuery] = React.useState("");
+  const [searchResults, setSearchResults] = React.useState([]);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
+   const { isOpen: isModal2Open, onOpen: openModal2, onClose: closeModal2 } = useDisclosure();
   const btnRef = React.useRef();
 
   const handleOver = (val) => {
     setCount(val);
   };
-  console.log(count);
 
-  
+  const handleChange = (event) => {
+    setQuery(event.target.value);
+    const result = A.filter((el) => {
+      console.log(el);
+      return el.toLowerCase().includes(query);
+    });
+    setSearchResults(result);
+  };
+  console.log(searchResults);
 
   return (
     <Box className={styles.navwrap}>
       <Flex className={styles.nav}>
+      <IconButton
+            size={'md'}
+            icon={isModal2Open ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
+            onClick={isModal2Open ? closeModal2 : openModal2}
+          />
         <NavLink to={"/"}>
           <img
             className={styles.logo}
@@ -421,10 +441,12 @@ const Navbar = () => {
 
                       <div>
                         <FormControl>
-                          <InputGroup size="xs">
+                          <InputGroup size="xs" width={"250px"}>
                             <Input
+                              onChange={handleChange}
+                              value={query}
                               variant="outline"
-                              type="search"
+                              type="text"
                               placeholder="Search for Products and Brands"
                             />
                             <InputRightElement
@@ -554,11 +576,13 @@ const Navbar = () => {
                   <InputGroup>
                     <Input
                       variant="flushed"
+                      borderColor={'Pink'}
+                      borderBottomWidth="2px"
                       type="search"
                       placeholder="Search for Products and Brands"
                     />
                     <InputRightElement
-                      children={<BsSearch color="pink.200" />}
+                      children={<BsSearch color="pink.200" size={25} />}
                     />
                   </InputGroup>
                 </FormControl>
@@ -570,9 +594,48 @@ const Navbar = () => {
           <BsHeart size={35} style={{ fill: "black" }} />
         </NavLink>
         <div>
-          <span>
-            <BsEmojiSmile size={35} style={{ fill: "black" }} />
-          </span>
+          <Popover trigger="hover">
+            <PopoverTrigger>
+              <span>
+                <BsEmojiSmile size={35} style={{ fill: "black" }} />
+              </span>
+            </PopoverTrigger>
+            <PopoverContent marginTop={"5px"}>
+              <PopoverHeader display={'flex'} justifyContent="center">
+                <Button
+                  variant={"solid"}
+                  colorScheme="purple"
+                  paddingTop={2}
+                  paddingBottom="2"
+                  paddingLeft={"20"}
+                  paddingRight={"20"}
+                  display="flex"
+                  
+                >
+                  SignIn
+                </Button>
+                
+              </PopoverHeader>
+              <PopoverBody >
+                <Stack>
+                <HStack>
+                  <p>New Customers</p>
+                  <p>Start here</p>
+                </HStack>
+                <div style={{fontSize:"13px"}}>
+                  <p>Your Orders</p>
+                  <p>Your Accounts</p>
+                  <p>Elite Members</p>
+                  <p>Your Beauty Profile</p>
+                  <p>Your Wishlist</p>
+                  <p>Your Credits</p>
+                  <p>Become a seller</p>
+                  <NavLink to={'/'}>Register Now</NavLink>
+                </div>
+                </Stack>
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
         </div>
         <div>
           <span>

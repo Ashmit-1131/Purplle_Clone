@@ -591,3 +591,4 @@ export const newlylaunches=[
     "https://media6.ppl-media.com/mediafiles/ecomm/misc/1599725027_colorbar-logo.jpg",
     "https://media6.ppl-media.com/mediafiles/ecomm/misc/1580226395_mamaearth-2.jpg"
 ]
+
