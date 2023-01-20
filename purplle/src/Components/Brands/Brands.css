@@ -14,7 +14,7 @@
     font-size: 24px;
     color: #2c414c;
     background-color: #D9FDE4;
-    margin-inline-start: 50px;
+    margin-inline-start: 70px;
 }
 
 .brand_container{
@@ -24,7 +24,8 @@
     padding-left: 50px;
     margin: auto;
     margin-bottom: 50px;
-    line-height: 16px;
+    text-align: left;
+    line-height: 35px;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
     font-family: 'Aqleema-Regular';
