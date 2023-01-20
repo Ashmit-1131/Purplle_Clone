@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 // import { SetLocal } from "../../Utils/localstorage";
-import Loading from "./Loading";
+import Loading from "../Cart_acc_ext/Loading";
 import swal from "sweetalert"
 
 function Login() {
