@@ -1,5 +1,5 @@
 import React from 'react'
-import {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} from "./brands"
+import {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} from "./brands.js"
 import "./Brands.css"
 
 const Brands = () => {
