@@ -1,5 +1,5 @@
 import React from 'react'
-import {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} from "./brands.js"
+import {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z} from "./brands"
 import "./Brands.css"
 
 const Brands = () => {
@@ -9,10 +9,10 @@ const Brands = () => {
         {/* <h2 style={{
             textAlign:"center"
         }}>All Brands</h2> */}
-        <h2 _ngcontent-lla-c8="" class="hdng-sub">
+        <h2 _ngcontent-lla-c8="" className="hdng-sub">
             <span _ngcontent-lla-c8="">ALL BRANDS
-                <span _ngcontent-lla-c8="" class="line1"></span>
-                <span _ngcontent-lla-c8="" class="line2"></span>
+                <span _ngcontent-lla-c8="" className="line1"></span>
+                <span _ngcontent-lla-c8="" className="line2"></span>
             </span>
         </h2>
         <span className='brand_initial'>A</span>
