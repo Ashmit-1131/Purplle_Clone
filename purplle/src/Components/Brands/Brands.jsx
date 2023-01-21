@@ -6,9 +6,15 @@ const Brands = () => {
   return (
     <>
     <div>
-        <h2 style={{
+        {/* <h2 style={{
             textAlign:"center"
-        }}>All Brands</h2>
+        }}>All Brands</h2> */}
+        <h2 _ngcontent-lla-c8="" className="hdng-sub">
+            <span _ngcontent-lla-c8="">ALL BRANDS
+                <span _ngcontent-lla-c8="" className="line1"></span>
+                <span _ngcontent-lla-c8="" className="line2"></span>
+            </span>
+        </h2>
         <span className='brand_initial'>A</span>
         <div className='brand_container'>
         {

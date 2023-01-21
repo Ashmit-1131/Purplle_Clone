@@ -8,6 +8,14 @@
     width: 958px;
     height: 102px;
 }
+.products{
+    display:grid;
+    margin:auto;
+    margin-top:50px;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+    width:95%;
+}
 
 @media (max-width: 600px){
     .heading{
@@ -23,5 +31,9 @@
         height: 280px;
         object-fit: contain;
         margin: auto;
+    }
+    .products{
+        display: flex;
+        flex-direction: column;
     }
 }
