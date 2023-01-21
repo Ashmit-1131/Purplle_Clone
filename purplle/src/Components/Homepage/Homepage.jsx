@@ -7,8 +7,12 @@ import axios from "axios"
 import { Button, ChakraProvider, color } from "@chakra-ui/react";
 import ImageSlider from "./ImageSlider";
 import styles from "./Homepage.module.css"
+
+
 // import Footer from "./Footer";
 // import Navbar from "./Navbar";
+
+
 
 const url="https://backenddata-smtw.onrender.com/products";
 const url1="https://backenddata-smtw.onrender.com/products?category=babycare";
@@ -42,7 +46,7 @@ function SampleNextArrow(props) {
 
 
 function Homepage() {
-    const [post,setPost]=useState([]);
+ const [post,setPost]=useState([]);
     const [post1,setPost1]=useState([]);
     const [post2,setPost2]=useState([]);
     const [post3,setPost3]=useState([]);
@@ -206,6 +210,8 @@ function Homepage() {
           }
         ]
       };
+
+    
     
     return ( 
       <> 
