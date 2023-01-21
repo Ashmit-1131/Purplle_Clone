@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
+import { Button,Modal } from "@chakra-ui/react";
+// import Button from "react-bootstrap/Button";
+// import Modal from "react-bootstrap/Modal";
 
 export default function Success({ containt, btn, access }) {
   const [show, setShow] = useState(false);
