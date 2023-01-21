@@ -1,10 +1,12 @@
 
 import './App.css';
+import Checkout from './Components/Checkout/Checkout';
 
 
 import Navbar from './Components/Navbar/Navbar';
 
-import Homepage from "./Components/Homepage/Homepage";
+
+
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
 
 
     <Navbar/>
+   <Checkout/>
 
     </div>
   );

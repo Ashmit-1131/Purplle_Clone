@@ -95,9 +95,9 @@ function Cart() {
 
   // to get the data in cart
 
-  // useEffect(() => {
-  //   getCard_data();
-  // }, [auth,auth2, data.total,data.render]);
+  useEffect(() => {
+    getCard_data();
+  }, [auth,auth2, data.total,data.render]);
 
   return (
     <div className={styles.Cart}>

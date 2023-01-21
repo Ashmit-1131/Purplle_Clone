@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import {
   A,
@@ -638,9 +638,15 @@ const Navbar = () => {
           </Popover>
         </div>
         <div>
-          <span>
+
+       
+            <span>
+         
             <BsCart4 size={35} style={{ fill: "black" }} />
+           
           </span>
+      
+          
         </div>
       </Flex>
     </Box>
