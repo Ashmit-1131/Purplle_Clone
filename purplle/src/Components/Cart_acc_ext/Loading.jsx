@@ -1,5 +1,5 @@
 import { Flex ,Heading} from "@chakra-ui/react";
-import { Spinner } from "react-bootstrap";
+import { Spinner } from "@chakra-ui/react";
 
 export default function Loading() {
  
