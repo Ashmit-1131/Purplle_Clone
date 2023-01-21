@@ -1,4 +1,5 @@
-.navwrap{
+
+/* .navwrap{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     top: 0;
     position: sticky;
@@ -6,7 +7,7 @@
     cursor: pointer;
    
    
-}
+} */
 
 
 .nav{
@@ -21,7 +22,8 @@
     
 }
 .logo{
-    width: 100px;
+    width: 80px;
+    height: 60px;
 }
 .form{
     height: 250px;
@@ -65,35 +67,32 @@
     width: 100px;
 }
 
+.accountInphone p{
+ font-size: 10px;
+ text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media Queries for Midium screen */
 @media all and (min-width:768px) and (max-width:1024px){
-    .navwrap{
-       
-       
-       
-    }
-    
-    
-    
-    .logo{
-        width: 50px;
-    }
-    .form{
-        height: 250px;
-        
-    }
+   
 }
 
 
 
 /* Media Queries for Small screen */
 @media all and (min-width:320px) and (max-width:767px){
-    .navwrap{
-        width: 600px;
-        display: flex;
-       
-       
-    }
+   
     
 }

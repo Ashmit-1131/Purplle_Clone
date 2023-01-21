@@ -2,20 +2,14 @@
 import './App.css';
 
 
-
-import Navbar from './Components/Navbar/Navbar';
-
-import Homepage from "./Components/Homepage/Homepage";
-import AllRoutes from './Routes/AllRoutes';
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
 
   return (
     <div className="App">
-
-
+    <h1>Purplle Website</h1>
     <Navbar/>
-    <AllRoutes />
     </div>
   );
 }
