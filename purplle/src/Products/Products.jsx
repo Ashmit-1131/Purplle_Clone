@@ -32,7 +32,8 @@ export default function MakeupData() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
     const makeupData = () => {
-        axios.get(`https://repulsive-nightgown-colt.cyclic.app/products?category=makeup`)
+        axios.get(`
+        https://backenddata-smtw.onrender.com/products?category=skin%20care`)
           .then((res) => {
             setmakeup(res.data)
     
@@ -117,7 +118,7 @@ export default function MakeupData() {
 
       useEffect(() => {
         makeupData()
-    //  Get_update();
+     Get_update();
       }, [])
       
       

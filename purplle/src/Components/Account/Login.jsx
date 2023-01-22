@@ -2,7 +2,7 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-// import { SetLocal } from "../../Utils/localstorage";
+import { SetLocal } from "../../Utils/localstorage";
 import Loading from "../Cart_acc_ext/Loading";
 import swal from "sweetalert"
 
@@ -10,6 +10,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [Load, setload] = useState(false);
+  const navigate=useNavigate()
  
 
   const handleLogin = (event) => {
@@ -27,9 +28,22 @@ function Login() {
             title: "Login Successfully",
             icon: "success",
             button: "ok",
+            
           })
-       
-        
+          
+          .then(() =>
+          {
+            setload(false)
+             SetLocal("auth", res.data.loginUser.accessToken);
+             if (res.data.loginUser.isAdmin) {
+               localStorage.setItem("isAdmin", JSON.stringify(true));
+               navigate("/admin");
+             } else {
+               navigate("/");
+             }
+          }
+          )
+      
          
         })
         .catch((err) => {

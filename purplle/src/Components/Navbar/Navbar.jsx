@@ -1,6 +1,9 @@
 import React from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink,Link,useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { GetLocal,SetRemove } from "../../Utils/localstorage";
+import swal from "sweetalert";
+import { useState,useEffect } from "react";
 
 import { A, B, C, D, E, F, G, H } from "./brandData";
 import { mostviewed, featured, newlylaunches } from "./brandData";
@@ -91,6 +94,28 @@ const Navbar = () => {
   };
   console.log(searchResults);
 
+  // Login/Logout
+  const Token = GetLocal("auth") || false;
+  const [Load, setLoad] = useState(Token);
+  const navigate = useNavigate();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem("isAdmin");
+    SetRemove("auth");
+    swal({
+      title: "Logout Successfully !",
+      text: "Go to Main Page",
+      icon: "success",
+      button: "ok",
+    }).then(() => {
+      setLoad(Token);
+      navigate("/");
+    });
+  };
+
+  useEffect(() => {}, [Load]);
+
   return (
     <Box
       width={"100%"}
@@ -99,6 +124,7 @@ const Navbar = () => {
 
       position={"fixed"}
       backgroundColor="white"
+      zIndex={10}
     >
       <HStack h={16} alignItems={"center"} justifyContent="center">
         {/* responsive */}
@@ -146,9 +172,9 @@ const Navbar = () => {
                 </DrawerContent>
               </Drawer>
             </Box>
-            <NavLink to={"/cart"}>
+            <Link to={"/cart"}>
               <BsCart4 />
-            </NavLink>
+            </Link>
             <Box>
               <Popover>
                 <PopoverTrigger>
@@ -241,7 +267,7 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                        <p>Makeup</p>
+                 <Link to='/products'> <p>Makeup</p></Link>      
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -712,23 +738,48 @@ const Navbar = () => {
               </PopoverTrigger>
               <PopoverContent marginTop={"5px"}>
                 <PopoverHeader display={"flex"} justifyContent="center">
-                  <Button
-                    variant={"solid"}
-                    colorScheme="purple"
-                    paddingTop={2}
-                    paddingBottom="2"
-                    paddingLeft={"20"}
-                    paddingRight={"20"}
-                    display="flex"
-                  >
-                    SignIn
-                  </Button>
+
+
+                  <Link to='/login'>
+                    {Token ? (
+                       <Button
+                       variant={"solid"}
+                       colorScheme="purple"
+                       paddingTop={2}
+                       paddingBottom="2"
+                       paddingLeft={"20"}
+                       paddingRight={"20"}
+                       display="flex"
+                       onClick={handleLogout}
+                     >
+                       SignOut
+                     </Button>
+   
+                    ):
+                    ( <Button
+                      variant={"solid"}
+                      colorScheme="purple"
+                      paddingTop={2}
+                      paddingBottom="2"
+                      paddingLeft={"20"}
+                      paddingRight={"20"}
+                      display="flex"
+                    >
+                      SignIn
+                    </Button>)}
+                 
+
+                    </Link>
+                  
                 </PopoverHeader>
                 <PopoverBody>
                   <Stack>
                     <HStack>
                       <p>New Customers</p>
-                      <p>Start here</p>
+                      <Link to='/signup'>
+                         <p>Start here</p>
+                         </Link>
+                     
                     </HStack>
                     <div style={{ fontSize: "13px", textAlign: "left" }}>
                       <p>Your Orders</p>
@@ -746,9 +797,12 @@ const Navbar = () => {
             </Popover>
           </div>
           <div>
+            <Link to='/cart'>
             <span>
               <BsCart4 size={35} style={{ fill: "black" }} />
             </span>
+            </Link>
+            
           </div>
         </HStack>
       </HStack>
@@ -829,6 +883,7 @@ const Navbar = () => {
             </DrawerContent>
           </Drawer>
         </Box>
+
         <NavLink to={"/favourites"}>
           <BsHeart size={35} style={{ fill: "black" }} />
         </NavLink>
@@ -891,8 +946,8 @@ const Navbar = () => {
       // </Flex>
 
         // </Box>
-      ) : null}
 
+      ) : null}
     </Box>
   );
 };
