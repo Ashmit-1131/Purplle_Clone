@@ -10,6 +10,7 @@ import Confirm from "./Confirm";
 import { useDispatch, useSelector } from "react-redux";
 import { CARD_DELETE_ALL } from "../../Redux/CartRedux/cart_action";
 import Loading from "../Cart_acc_ext/Loading";
+import Success from "./Success";
 
 
 export default function Checkout() {

@@ -1,7 +1,7 @@
-import { Flex, Text,Button,Modal } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React, { memo, useState } from "react";
-// import Button from "react-bootstrap/Button";
-// import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import Success from "./Success";
 import swal from "sweetalert"
 import { useNavigate } from "react-router-dom";

@@ -1,6 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { memo, useEffect, useState } from "react";
-
+import { Modal,Image } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { EDIT_CARD_DATA } from "../../Redux/CartRedux/cart_action";
 import ButtonComponent from "./ButtonComponent";
