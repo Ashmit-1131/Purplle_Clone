@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios"
-import { Button, ChakraProvider, color } from "@chakra-ui/react";
+// import { Button, ChakraProvider, color } from "@chakra-ui/react";
 import ImageSlider from "./ImageSlider";
 import styles from "./Homepage.module.css"
 
@@ -216,9 +216,7 @@ function Homepage() {
     
     return ( 
       <> 
-        {/* <Navbar/> */}
-        <ChakraProvider>
-        <div >
+        <div style={{marginTop:"70px"}}>
         <div className='containerStyles' style={containerStyles}>
             <ImageSlider slides={slides} />
         </div>
@@ -234,7 +232,7 @@ function Homepage() {
                 <div style={{height:'440px'}}>
                 <div className={styles.card} style={{borderRadius:'10px',gap:'20px',height:'340px',overflow:'hidden'}}>
                 <div className="card-top" style={{width:'150px',marginLeft:'35px',marginTop:'20px'}}>
-                    <Link to={`/${item._id}`}><img style={{marginLeft:"45px"}} src={item.image} /></Link>
+                    <Link to={`/${item._id}`}><img style={{marginLeft:"45px"}} src={item.image} alt="product-img"/></Link>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px"}}>
                 <h3 style={{color:"#566770"}}>{item.name}</h3>
@@ -261,7 +259,7 @@ function Homepage() {
                 <div className={styles.card} style={{borderRadius:'10px',height:'340px',overflow:'hidden'}}>
                     <div>
                 <div className="card-top" style={{width:'150px',marginLeft:'35px',marginTop:'20px'}}>
-                    <img style={{marginLeft:"45px"}} src={item.image} />
+                    <img style={{marginLeft:"45px"}} src={item.image} alt="product-img"/>
                 </div>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px"}}>
@@ -289,7 +287,7 @@ function Homepage() {
                 <div>
                 <div className={styles.card} style={{borderRadius:'10px',height:'330px',overflow:'hidden'}}>
                 <div className="card-top" style={{backgroundColor:"red",width:'150px',marginLeft:'120px',marginTop:'20px'}}>
-                    <img  src={item.image} />
+                    <img  src={item.image} alt="product-img"/>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px",lineHeight:"30px"}}>
                 <h3 style={{color:"#566770"}}>{item.name}</h3>
@@ -310,21 +308,21 @@ function Homepage() {
                         <h1 style={{fontSize:'15px',textAlign:'left'}}>Get fuller-looking, softer, and smoother brows with the Brow Genius Serum—only at Sephora.</h1>
                         <br /> */}
                         <h1 style={{fontSize:'18px',fontWeight:'bolder',textAlign:'left'}}>SHOP NOW▸</h1>
-                    <img style={{width:'118%'}} src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1673953608_lakme-720x350.jpeg" />
+                    <img style={{width:'118%'}} src="https://media6.ppl-media.com/tr:dpr-2/mediafiles/ecomm/misc/1673953608_lakme-720x350.jpeg" alt="product-img"/>
                     </div>
                     <div style={{height:'280px',marginLeft:'13px',width:'450px',borderRadius:'5px',backgroundColor:'#a5e1bd'}}>
                     {/* <h1 style={{fontSize:'30px',fontWeight:"bolder",textAlign:'left'}}>Clean Beauty Under $20</h1>
                         <h1 style={{fontSize:'15px',textAlign:'left'}}>New hair and skin heroes powered by feel-good ingredients.</h1>
                         <br /> */}
                         <h1 style={{fontSize:'18px',fontWeight:'bolder',textAlign:'left'}}>SHOP NOW▸</h1>
-                    <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1674056586_creme-blush3.gif"/>
+                    <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1674056586_creme-blush3.gif" alt="product-img"/>
                     </div>
                     <div style={{height:'280px',marginLeft:'13px',width:'450px',borderRadius:'5px',backgroundColor:'#8cb8e9'}}>
                     {/* <h1 style={{fontSize:'30px',fontWeight:"bolder",textAlign:'left'}}>Wedding Beauty Services</h1>
                         <h1 style={{fontSize:'15px',textAlign:'left'}}>Get a makeup look you'll love for all your big events.</h1>
                         <br /> */}
                         <h1 style={{fontSize:'18px',fontWeight:'bolder',textAlign:'left'}}>SHOP NOW▸</h1>
-                    <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1674137450_mamaearth.png"/>
+                    <img src="https://media6.ppl-media.com/tr:w-640,ar-20557-9993,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1674137450_mamaearth.png" alt="product-img"/>
                     </div>
 
                 </div>
@@ -341,7 +339,7 @@ function Homepage() {
                 <div>
                 <div className={styles.card} style={{borderRadius:'10px',height:'340px',overflow:'hidden'}}>
                 <div className="card-top" style={{width:'150px',marginLeft:'35px',marginTop:'20px'}}>
-                    <img style={{marginLeft:"45px"}} src={item.image} />
+                    <img style={{marginLeft:"45px"}} src={item.image} alt="product-img"/>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px"}}>
                 <h3 style={{color:"#566770"}}>{item.name}</h3>
@@ -378,7 +376,6 @@ function Homepage() {
             </Slider>
             </div><br /><br /> */}
         </div>
-        </ChakraProvider>
         {/* <Footer/> */}
         </>
      );

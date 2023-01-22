@@ -754,6 +754,7 @@ const Navbar = () => {
       </HStack>
 
       {isModal2Open ? (
+        <>
         <Box display={{ md: "none" }}>
           <Drawer isOpen={isModal2Open} placement="left" onClose={closeModal2}>
             <DrawerOverlay />
@@ -827,7 +828,7 @@ const Navbar = () => {
               </DrawerBody>
             </DrawerContent>
           </Drawer>
-        </div>
+        </Box>
         <NavLink to={"/favourites"}>
           <BsHeart size={35} style={{ fill: "black" }} />
         </NavLink>
@@ -886,9 +887,10 @@ const Navbar = () => {
       
           
         </div>
-      </Flex>
+        </>
+      // </Flex>
 
-        </Box>
+        // </Box>
       ) : null}
 
     </Box>

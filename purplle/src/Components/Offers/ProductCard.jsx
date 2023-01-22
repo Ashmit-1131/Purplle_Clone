@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import {Button, Spinner} from "@chakra-ui/react"
-import "./Product.css";
+import "./ProductCard.css";
 
 const getData = async (id)=>{
     try{

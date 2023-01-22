@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text,Image,Modal } from "@chakra-ui/react";
 import { memo, useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
