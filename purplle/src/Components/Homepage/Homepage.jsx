@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios"
 import { Button, ChakraProvider, color } from "@chakra-ui/react";
 import ImageSlider from "./ImageSlider";
@@ -233,7 +234,7 @@ function Homepage() {
                 <div style={{height:'440px'}}>
                 <div className={styles.card} style={{borderRadius:'10px',gap:'20px',height:'340px',overflow:'hidden'}}>
                 <div className="card-top" style={{width:'150px',marginLeft:'35px',marginTop:'20px'}}>
-                    <img style={{marginLeft:"45px"}} src={item.image} />
+                    <Link to={`/${item._id}`}><img style={{marginLeft:"45px"}} src={item.image} /></Link>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px"}}>
                 <h3 style={{color:"#566770"}}>{item.name}</h3>
