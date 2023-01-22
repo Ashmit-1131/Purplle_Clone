@@ -228,7 +228,7 @@ function Homepage() {
             <Slider {...settings}>
 
             {
-            post.map(item=>(
+            post?.map(item=>(
                 <div style={{height:'440px'}}>
                 <div className={styles.card} style={{borderRadius:'10px',gap:'20px',height:'340px',overflow:'hidden'}}>
                 <div className="card-top" style={{width:'150px',marginLeft:'35px',marginTop:'20px'}}>
@@ -254,12 +254,12 @@ function Homepage() {
             <Slider {...settings}>
 
             {
-            post1.map(item=>(
+            post1?.map(item=>(
                 <div>
                 <div className={styles.card} style={{borderRadius:'10px',height:'340px',overflow:'hidden'}}>
                     <div>
                 <div className="card-top" style={{width:'150px',marginLeft:'35px',marginTop:'20px'}}>
-                    <img style={{marginLeft:"45px"}} src={item.image} alt="product-img"/>
+                    <Link to={`/${item._id}`}><img style={{marginLeft:"45px"}} src={item.image} alt="product-img"/></Link>
                 </div>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px"}}>
@@ -283,11 +283,11 @@ function Homepage() {
             <Slider {...settings1}>
 
             {
-            post2.map(item=>(
+            post2?.map(item=>(
                 <div>
                 <div className={styles.card} style={{borderRadius:'10px',height:'330px',overflow:'hidden'}}>
                 <div className="card-top" style={{backgroundColor:"red",width:'150px',marginLeft:'120px',marginTop:'20px'}}>
-                    <img  src={item.image} alt="product-img"/>
+                    <Link to={`/${item._id}`}><img  src={item.image} alt="product-img"/></Link>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px",lineHeight:"30px"}}>
                 <h3 style={{color:"#566770"}}>{item.name}</h3>
@@ -335,11 +335,11 @@ function Homepage() {
             <Slider {...settings}>
 
             {
-            post3.map(item=>(
+            post3?.map(item=>(
                 <div>
                 <div className={styles.card} style={{borderRadius:'10px',height:'340px',overflow:'hidden'}}>
                 <div className="card-top" style={{width:'150px',marginLeft:'35px',marginTop:'20px'}}>
-                    <img style={{marginLeft:"45px"}} src={item.image} alt="product-img"/>
+                    <Link to={`/${item._id}`}><img style={{marginLeft:"45px"}} src={item.image} alt="product-img"/></Link>
                 </div>
                 <div className="card-bottom" style={{textAlign:"center",marginTop:"2px"}}>
                 <h3 style={{color:"#566770"}}>{item.name}</h3>
