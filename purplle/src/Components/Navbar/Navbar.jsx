@@ -808,6 +808,7 @@ const Navbar = () => {
       </HStack>
 
       {isModal2Open ? (
+        <>
         <Box display={{ md: "none" }}>
           <Drawer isOpen={isModal2Open} placement="left" onClose={closeModal2}>
             <DrawerOverlay />
@@ -882,6 +883,70 @@ const Navbar = () => {
             </DrawerContent>
           </Drawer>
         </Box>
+
+        <NavLink to={"/favourites"}>
+          <BsHeart size={35} style={{ fill: "black" }} />
+        </NavLink>
+        <div>
+          <Popover trigger="hover">
+            <PopoverTrigger>
+              <span>
+                <BsEmojiSmile size={35} style={{ fill: "black" }} />
+              </span>
+            </PopoverTrigger>
+            <PopoverContent marginTop={"5px"}>
+              <PopoverHeader display={'flex'} justifyContent="center">
+                <Button
+                  variant={"solid"}
+                  colorScheme="purple"
+                  paddingTop={2}
+                  paddingBottom="2"
+                  paddingLeft={"20"}
+                  paddingRight={"20"}
+                  display="flex"
+                  
+                >
+                  SignIn
+                </Button>
+                
+              </PopoverHeader>
+              <PopoverBody >
+                <Stack>
+                <HStack>
+                  <p>New Customers</p>
+                  <p>Start here</p>
+                </HStack>
+                <div style={{fontSize:"13px"}}>
+                  <p>Your Orders</p>
+                  <p>Your Accounts</p>
+                  <p>Elite Members</p>
+                  <p>Your Beauty Profile</p>
+                  <p>Your Wishlist</p>
+                  <p>Your Credits</p>
+                  <p>Become a seller</p>
+                  <NavLink to={'/'}>Register Now</NavLink>
+                </div>
+                </Stack>
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
+        </div>
+        <div>
+
+       
+            <span>
+         
+            <BsCart4 size={35} style={{ fill: "black" }} />
+           
+          </span>
+      
+          
+        </div>
+        </>
+      // </Flex>
+
+        // </Box>
+
       ) : null}
     </Box>
   );
