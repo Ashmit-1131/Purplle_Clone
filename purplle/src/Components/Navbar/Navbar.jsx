@@ -5,7 +5,7 @@ import { GetLocal,SetRemove } from "../../Utils/localstorage";
 import swal from "sweetalert";
 import { useState,useEffect } from "react";
 
-import { A, B, C, D, E, F, G, H } from "./brandData";
+import { A } from "./brandData";
 import { mostviewed, featured, newlylaunches } from "./brandData";
 
 import { Stack, Box, Flex, HStack, VStack } from "@chakra-ui/react";
@@ -92,7 +92,7 @@ const Navbar = () => {
     });
     setSearchResults(result);
   };
-  console.log(searchResults);
+  // console.log(searchResults);
 
   // Login/Logout
   const Token = GetLocal("auth") || false;
@@ -579,7 +579,7 @@ const Navbar = () => {
                           <FormControl>
                             <InputGroup size="xs" width={"250px"}>
                               <Input
-                                onChange={handleChange}
+                                onInput={handleChange}
                                 value={query}
                                 variant="outline"
                                 type="text"
@@ -597,52 +597,14 @@ const Navbar = () => {
                           <b>A</b>
                         </div>
                         <div style={{ overflowY: "scroll", fontSize: "13px" }}>
-                          {A.map((el) => {
-                            return <p>{el}</p>;
-                          })}
-                          <div>
-                            <b>B</b>
-                          </div>
-                          {B.map((el) => {
-                            return <p>{el}</p>;
-                          })}
-                          <div>
-                            <b>C</b>
-                          </div>
-                          {C.map((el) => {
-                            return <p>{el}</p>;
-                          })}
-
-                          <div>
-                            <b>D</b>
-                          </div>
-                          {D.map((el) => {
-                            return <p>{el}</p>;
-                          })}
-                          <div>
-                            <b>E</b>
-                          </div>
-                          {E.map((el) => {
-                            return <p>{el}</p>;
-                          })}
-                          <div>
-                            <b>F</b>
-                          </div>
-                          {F.map((el) => {
-                            return <p>{el}</p>;
-                          })}
-                          <div>
-                            <b>G</b>
-                          </div>
-                          {G.map((el) => {
-                            return <p>{el}</p>;
-                          })}
-                          <div>
-                            <b>H</b>
-                          </div>
-                          {H.map((el) => {
-                            return <p>{el}</p>;
-                          })}
+                          {/* CCC */}
+                          {query
+                            ? searchResults.map((a) => {
+                                return <p>{a}</p>;
+                              })
+                            : A.map((el) => {
+                                return <p>{el}</p>;
+                              })}
                         </div>
                       </div>
                     </div>

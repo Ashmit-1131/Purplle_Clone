@@ -4,6 +4,7 @@
 .mainfoot{
     width: 99%;
     margin: auto;
+    margin-top: 100px;
     height: 350px;
     background-color: #e4e8ea;
     /* border:1px solid red; */

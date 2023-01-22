@@ -2,6 +2,7 @@
 @media only screen and (min-width: 1008px) {
   .validation_form {
     width: 100%;
+    text-align: center;
   }
   .title_validation {
     margin-bottom: 20px;

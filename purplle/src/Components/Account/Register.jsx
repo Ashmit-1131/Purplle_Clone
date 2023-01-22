@@ -9,7 +9,7 @@ function Register() {
       <div className="register_auth">
         <div className="signup_fb_google">
           <p className="about_you">About You</p>
-          <p className="sign_up_with">Sign Up With</p>
+          {/* <p className="sign_up_with">Sign Up With</p> */}
 
        
 

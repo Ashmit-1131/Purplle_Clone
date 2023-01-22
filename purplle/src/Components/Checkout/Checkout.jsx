@@ -1,17 +1,16 @@
 import { Heading, Text, Box, Flex, Radio } from "@chakra-ui/react";
 
 import React, { useEffect, useState } from "react";
-import InputComponent from "./InputComponent";
+import InputComponent from "./InputComponent"
 import styles from "./Checkout.module.css";
 import { initialState, InputArray, inputs } from "../../Utils/localData";
-
-import { useLocation } from "react-router-dom";
+import ButtonComponent from "../Cart_acc_ext/ButtonComponent";
+import { useLocation, useNavigate } from "react-router-dom";
 import Confirm from "./Confirm";
 import { useDispatch, useSelector } from "react-redux";
 import { CARD_DELETE_ALL } from "../../Redux/CartRedux/cart_action";
 import Loading from "../Cart_acc_ext/Loading";
 import Success from "./Success";
-
 
 export default function Checkout() {
   const [data, setData] = useState(initialState);
@@ -34,7 +33,6 @@ export default function Checkout() {
 
 
   useEffect(() => {
-    
     
   },[auth2])
 

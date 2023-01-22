@@ -19,15 +19,16 @@ import Products from '../Products/Products'
 import New from '../Components/New/New'
 
 import PrivateRoutes from './PrivateRoutes'
-import Register from '../Components/Account/Register'
+
 import ProductPage from '../Components/New/ProductPage'
+import Payment from '../Components/Checkout/Payment'
 
 const AllRoutes = () => {
   return (
     <div>
         <Routes>
           
-        <Route path="/" element={<HomePage/>}/>
+      
 
         <Route path="/cart" element={
         <PrivateRoutes>
@@ -56,6 +57,10 @@ const AllRoutes = () => {
 
       <Route path="/products" element={<Products />} />
   <Route path="/offers/:id" element={<ProductCard/>}/>
+  
+  <Route path="/payment" element={<Payment />} />
+
+
  
 
 

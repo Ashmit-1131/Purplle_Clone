@@ -166,7 +166,7 @@ const ValidationForm = () => {
               />
             </label>
             <br />
-            <Text mt="5px" color="red" display={fields.password.length===5 ? "none":"flex"} > Password must be 5 Letters</Text>
+            <Text mt="5px" color="red" textAlign={'center'} display={fields.password.length===5 ? "none":"flex"} ></Text>
           </p>
 
        

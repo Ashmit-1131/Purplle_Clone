@@ -4,6 +4,13 @@ import { useParams } from 'react-router-dom'
 import {Button, Spinner} from "@chakra-ui/react"
 import "./Product.css";
 
+import { ADD_CARD_DATA } from '../../Redux/CartRedux/cart_action';
+import { GetLocal } from '../../Utils/localstorage';
+import Loading from '../Cart_acc_ext/Loading';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import swal from 'sweetalert';
+
 const getData = async (id)=>{
     try{
       let res = await fetch(`https://backenddata-smtw.onrender.com/products?_id=${id}`)
@@ -22,6 +29,47 @@ const Product = () => {
     const [quantity, setQuantity] = useState(1);
     const [loading,setLoading] = useState(false);
     let id=params.id;
+    // add to cart
+    const [Load, setLoad] = useState(false);
+    const Token = GetLocal("auth") || false;
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+      // add to cart
+      const handleCartClick = (image, price, name) => {
+        setLoad(true);
+        if (Token) {
+          const data = {
+            image,
+            price,
+            name,
+          };
+    
+          dispatch(ADD_CARD_DATA(data)).then((res) => {
+            swal({
+              title: "Product added Successfully !",
+              text: "",
+              icon: "success",
+              button: "ok",
+            });
+            setLoad(false);
+          });
+        } else {
+          setLoad(false);
+          swal({
+            title: "You are Not Login  !",
+            text: "Please Login Click ok",
+            icon: "error",
+            button: "ok",
+          }).then(() => navigate("/login"));
+        }
+      };
+    
+
+
+
+
+
+
     useEffect(()=>{
         fetchData(id)
       },[id])
@@ -75,7 +123,10 @@ const Product = () => {
               <Button onClick={() => handleQuantity("inc")}>+</Button>
           </div>
           <div className='cart-buttons'>
-                <Button colorScheme='blue'>ADD TO CART</Button>
+                <Button colorScheme='blue'
+                    onClick={() =>
+                      handleCartClick(product[0]?.image,product[0]?.price,product[0]?.name)
+                    }>ADD TO CART</Button>
                 <Button>Wishlist</Button>
           </div>
         </div>

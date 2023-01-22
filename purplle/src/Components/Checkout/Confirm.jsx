@@ -47,7 +47,7 @@ function ConfirmModal({ amount, handleDeleteMany }) {
 
   return (
     <>
-      <Button color="pink" variant="primary" onClick={handleShow}>
+      <Button backgroundColor="pink" variant="primary" onClick={handleShow}>
         Next
       </Button>
       <Modal
