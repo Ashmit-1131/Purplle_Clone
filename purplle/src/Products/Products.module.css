@@ -1,0 +1,77 @@
+#makeup_main_div{
+    width: 100%;
+    border: 1px solid rgb(207, 203, 203);
+    padding: 10px 10px 10px 10px;
+}
+#makeup_main_container{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+/* #makeup_img_div{
+    border: 2px solid pink;
+}
+#makeup_name_div{
+    border: 2px solid orangered;
+} */
+#go_star_div{
+    display: flex;
+    width: 35%;
+    gap: 10px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    /* border: 2px solid black; */
+}
+#add_to_cart_div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: auto; */
+    /* border: 2px solid green; */
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    background-color: #DD2085;
+}
+#main_add_cart_div{
+    display: flex;
+    cursor: pointer;
+    width: 60%;
+    color: grey;
+    /* border: 2px solid yellowgreen; */
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 5px;
+    gap: 10px;
+}
+#hrt_div{
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22%;
+    border-radius: 7px;
+}
+#price_pink_div{
+    color: #DD2085;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+@media screen and (max-width:1180px) and (min-width:769px){
+    #makeup_main_container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:320px){
+    #makeup_main_container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

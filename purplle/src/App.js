@@ -1,20 +1,17 @@
 
 import './App.css';
+import Checkout from './Components/Checkout/Checkout';
 
-import Navbar from './Components/Navbar/Navbar';
 
-import Homepage from "./Components/Homepage/Homepage";
 
-import Footer from "./Components/Footer/Footer";
+
 function App() {
 
   return (
     <div className="App">
     <h1>Purplle Website</h1>
-
     <Navbar/>
-    <Homepage />
-    <Footer />
+
     </div>
   );
 }
