@@ -13,8 +13,9 @@ const Footer = () => {
   return (
     <div className='mainfoot'>
         <div className='mainfootchild1'>
+            
             <div>
-                <h3>PURPLLE</h3>
+                <h3 style={{fontSize:"14px",color:"#6C7A82"}}>PURPLLE</h3>
                 <p>About us</p>
                 <p>Our Team</p>
                 <p>Carrers</p>
@@ -44,16 +45,16 @@ const Footer = () => {
                 <div style={{marginRight:"-50px"}}>
                     <h3 style={{color:"#6C7A82",fontSize:"14px",marginRight:"-60px"}}>PAYMENT</h3>
                 </div>
-                <div style={{marginRight:"-10px"}}>
-                <img style={{marginTop:"8px"}} src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1499177379_tt.jpg" alt="img" />
+                <div style={{marginRight:"0px"}}>
+                <img style={{marginTop:"0px"}} src="https://media6.ppl-media.com/mediafiles/ecomm/promo/1499177379_tt.jpg" alt="img" />
                 </div>
             </div>
 
             <div className='mann2'>
                 <div>
-                    <h3 style={{color:"#6C7A82",fontSize:"14px",marginRight:"-60px"}}>CONNECT</h3>
+                    <h3 style={{color:"#6C7A82",fontSize:"14px",marginRight:"-30px"}}>CONNECT</h3>
                 </div>
-                <div style={{marginTop:"10px"}}>
+                <div className='footicon' style={{marginTop:"0px"}}>
                     
                     <span style={{marginRight:"5px"}}><AiFillTwitterCircle style={{fontSize:"25px"}} /></span>
                     <span style={{marginRight:"5px"}}><FaFacebook style={{fontSize:"23px"}} /></span>
