@@ -15,8 +15,16 @@ import ProductCard from "../Components/Offers/ProductCard"
 import Cart from '../Components/Cart/Cart'
 import Checkout from '../Components/Checkout/Checkout'
 
+
 import Products from '../Products/Products'
+import SkinProducts from "../Products/SkinProducts"
+import Fragrance from "../Products/Fragrance"
+import HairCare from "../Products/HairCare"
+import Health from "../Products/Health"
+import PersonalCare from "../Products/PersonalCare"
+import BabyCare from "../Products/BabyCare"
 import New from '../Components/New/New'
+import Ayurvedha from "../Products/Ayurvedha"
 
 import PrivateRoutes from './PrivateRoutes'
 
@@ -56,6 +64,15 @@ const AllRoutes = () => {
         />
 
       <Route path="/products" element={<Products />} />
+      <Route path="/skinproducts" element={<SkinProducts/>} />
+      <Route path="/hair" element={<HairCare/>} />
+      <Route path="/fragrance" element={<Fragrance/>} />
+      <Route path="/baby" element={<BabyCare/>} />
+      <Route path="/health" element={<Health/>} />
+      <Route path="/personal" element={<PersonalCare/>} />
+      <Route path="/ayurvedha" element={<Ayurvedha/>} />
+
+
   <Route path="/offers/:id" element={<ProductCard/>}/>
   
   <Route path="/payment" element={<Payment />} />

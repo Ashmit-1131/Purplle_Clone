@@ -33,7 +33,7 @@ export default function MakeupData() {
   const dispatch = useDispatch();
     const makeupData = () => {
         axios.get(`
-        https://backenddata-smtw.onrender.com/products?category=makeup`)
+        https://backenddata-smtw.onrender.com/products?category=ayurveda`)
           .then((res) => {
             setmakeup(res.data)
     

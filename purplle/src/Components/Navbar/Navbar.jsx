@@ -267,7 +267,7 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                 <Link to='/products'> <p>Makeup</p></Link>      
+                 <Link to='/products'> <p>Makeup</p></Link>
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -322,7 +322,7 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                        <p>Skin Care</p>
+                      <Link to='/skinproducts'><p>Skin Care</p></Link>
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -374,7 +374,9 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                        <p>Hare Care</p>
+                    <Link to="/hair">
+                        <p>Hair Care</p>
+                    </Link>  
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -478,7 +480,9 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
+                        <Link to="/personal">
                         <p>Personal Care</p>
+                        </Link>
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -528,19 +532,29 @@ const Navbar = () => {
                     </Popover>
                   </div>
                   <div>
+                  <Link to="/ayurvedha">
                     <p>Men</p>
+                    </Link>
                   </div>
                   <div>
+                    <Link to="/fragrance">
                     <p>Fragrance</p>
+                    </Link>
                   </div>
                   <div>
+                    <Link to="/health">
                     <p>Health & Wellness</p>
+                    </Link>
                   </div>
                   <div>
+                    <Link to="/baby" >
                     <p>Mom & Baby</p>
+                    </Link>
                   </div>
                   <div>
+                   
                     <p>Men</p>
+                    
                   </div>
                 </PopoverHeader>
               </PopoverContent>
