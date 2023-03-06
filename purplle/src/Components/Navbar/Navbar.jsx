@@ -7,6 +7,7 @@ import { useState,useEffect } from "react";
 
 import { A } from "./brandData";
 import { mostviewed, featured, newlylaunches } from "./brandData";
+import Navinput from "./Navinput";
 
 import { Stack, Box, Flex, HStack, VStack } from "@chakra-ui/react";
 import {
@@ -267,7 +268,7 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                 <Link to='/products'> <p>Makeup</p></Link>
+                 <Link to='/products'> <p>Makeup</p></Link>      
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -291,6 +292,7 @@ const Navbar = () => {
                           >
                             {/* <p><b> Face Makeup</b></p> */}
                             <div>
+                           
                               <b>Face Makeup</b>
                               {faceMakeup.map((el) => {
                                 return (
@@ -322,7 +324,8 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                      <Link to='/skinproducts'><p>Skin Care</p></Link>
+                        <Link to="./skinproducts">   <p>Skin Care</p></Link>
+                     
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -374,9 +377,8 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                    <Link to="/hair">
-                        <p>Hair Care</p>
-                    </Link>  
+                        <Link to="./hair"><p>Hare Care</p></Link>
+                        
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -428,7 +430,8 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                        <p>Application</p>
+                        <Link to="./products"> <p>Application</p></Link>
+                       
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -480,9 +483,8 @@ const Navbar = () => {
                   <div>
                     <Popover trigger="hover">
                       <PopoverTrigger>
-                        <Link to="/personal">
-                        <p>Personal Care</p>
-                        </Link>
+                        <Link to="./personal">  <p>Personal Care</p></Link>
+                      
                       </PopoverTrigger>
                       <PopoverContent
                         marginTop={"2px"}
@@ -532,29 +534,24 @@ const Navbar = () => {
                     </Popover>
                   </div>
                   <div>
-                  <Link to="/ayurvedha">
-                    <p>Men</p>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link to="/fragrance">
-                    <p>Fragrance</p>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link to="/health">
-                    <p>Health & Wellness</p>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link to="/baby" >
-                    <p>Mom & Baby</p>
-                    </Link>
-                  </div>
-                  <div>
-                   
-                    <p>Men</p>
+                    <Link to="./ayurvedha"><p>Men</p></Link>
                     
+                  </div>
+                  <div>
+                    <Link to="./fragrance"><p>Fragrance</p></Link>
+                    
+                  </div>
+                  <div>
+                    <Link to="./health"> <p>Health & Wellness</p></Link>
+                   
+                  </div>
+                  <div>
+                    <Link to="./baby"> <p>Mom & Baby</p></Link>
+                   
+                  </div>
+                  <div>
+                    <Link to="./health">  <p>Men</p></Link>
+                  
                   </div>
                 </PopoverHeader>
               </PopoverContent>
@@ -684,25 +681,17 @@ const Navbar = () => {
                 <DrawerHeader>Search for Products and Brands</DrawerHeader>
 
                 <DrawerBody>
+
                   <FormControl className={styles.form}>
-                    <InputGroup>
-                      <Input
-                        variant="flushed"
-                        borderColor={"Pink"}
-                        borderBottomWidth="2px"
-                        type="search"
-                        placeholder="Search for Products and Brands"
-                      />
-                      <InputRightElement
-                        children={<BsSearch color="pink.200" size={25} />}
-                      />
-                    </InputGroup>
+                  
+                    <Navinput/>
                   </FormControl>
+                  
                 </DrawerBody>
               </DrawerContent>
             </Drawer>
           </div>
-          <NavLink to={"/favourites"}>
+          <NavLink to={"/Wishlist"}>
             <BsHeart size={'35'} style={{ fill: "black" }} />
           </NavLink>
           <div>
@@ -860,7 +849,7 @@ const Navbar = () => {
           </Drawer>
         </Box>
 
-        <NavLink to={"/favourites"}>
+        <NavLink to={"/Wishlist"}>
           <BsHeart size={35} style={{ fill: "black" }} />
         </NavLink>
         <div>

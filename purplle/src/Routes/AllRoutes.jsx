@@ -13,6 +13,7 @@ import Brands from '../Components/Brands/Brands.jsx'
 import Offers from '../Components/Offers/Offers'
 import ProductCard from "../Components/Offers/ProductCard"
 import Cart from '../Components/Cart/Cart'
+import Wishlist from '../Components/Cart/wishlist'
 import Checkout from '../Components/Checkout/Checkout'
 
 
@@ -41,6 +42,12 @@ const AllRoutes = () => {
         <Route path="/cart" element={
         <PrivateRoutes>
            <Cart />
+        </PrivateRoutes>
+       } />
+
+<Route path="/wishlist" element={
+        <PrivateRoutes>
+           <Wishlist />
         </PrivateRoutes>
        } />
               <Route path="/checkout" element={<Checkout />} />

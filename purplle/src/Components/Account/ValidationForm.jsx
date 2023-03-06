@@ -30,7 +30,7 @@ const ValidationForm = () => {
     if (fields.password.length !== 5) {
       swal({
         title: "Register Failed !",
-        text: "Password must be 6 letters",
+        text: "Password must be 5 letters",
         icon: "error",
         button: "ok",
       });

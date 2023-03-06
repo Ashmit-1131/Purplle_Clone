@@ -127,7 +127,10 @@ const Product = () => {
                     onClick={() =>
                       handleCartClick(product[0]?.image,product[0]?.price,product[0]?.name)
                     }>ADD TO CART</Button>
-                <Button>Wishlist</Button>
+                <Button
+                
+                onClick={() =>
+                  handleCartClick(product[0]?.image,product[0]?.price,product[0]?.name)}>Wishlist</Button>
           </div>
         </div>
     </div>
