@@ -23,7 +23,7 @@ function App() {
     <AllRoutes/>
    
     <Footer/>
-    {/* Checking whether connected to repo */}
+    {/* Checking whether connected to repo change */}
 
 
     </div>
