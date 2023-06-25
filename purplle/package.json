@@ -18,6 +18,7 @@
     "react-dom": "^18.2.0",
     "react-form-input": "^0.3.0",
     "react-icons": "^4.7.1",
+    "react-lottie": "^1.2.3",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",

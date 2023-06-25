@@ -4,7 +4,7 @@ import { memo, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { EDIT_CARD_DATA } from "../../Redux/CartRedux/cart_action";
 import ButtonComponent from "./ButtonComponent";
-import Loading from "./Loading";
+import Loading from "../Loading/Loading";
 import styles from "./EditComponent.module.css";
 import swal from "sweetalert"
 import axios from "axios";

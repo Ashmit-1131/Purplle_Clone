@@ -10,7 +10,7 @@ import { GetLocal } from '../Utils/localstorage'
 import style from "./Products.module.css"
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import Loading from '../Components/Cart_acc_ext/Loading'
+import Loading from '../Components/Loading/Loading'
 import { Flex } from '@chakra-ui/react'
 // import Pagination from './Pagination'
 

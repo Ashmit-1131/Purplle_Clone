@@ -1,0 +1,1 @@
+export const BASE_URL1 = "https://important-underwear-boa.cyclic.app"

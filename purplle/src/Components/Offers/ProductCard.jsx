@@ -6,7 +6,7 @@ import "./ProductCard.css";
 
 import { ADD_CARD_DATA } from '../../Redux/CartRedux/cart_action';
 import { GetLocal } from '../../Utils/localstorage';
-import Loading from '../Cart_acc_ext/Loading';
+import Loading from "../Loading/Loading"
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import swal from 'sweetalert';

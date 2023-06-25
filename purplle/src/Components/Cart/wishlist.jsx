@@ -4,7 +4,7 @@ import swal from "sweetalert"
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import ButtonComponent from "../Cart_acc_ext/ButtonComponent";
-import Loading from "../Cart_acc_ext/Loading";
+import Loading from "../Loading/Loading";
 import ProductCard from "../Cart_acc_ext/ProductCard";
 import {
   

@@ -3,7 +3,7 @@ import { Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
-import Loading from "../Cart_acc_ext/Loading";
+import Loading from "../Loading/Loading"
 import swal from "sweetalert"
 const initialState = {
   firstName: "",
@@ -45,7 +45,7 @@ const ValidationForm = () => {
         setload(true);
         axios
           .post(
-            "https://repulsive-nightgown-colt.cyclic.app/users/signup",
+            "https://average-wrap-eel.cyclic.app/users/register",
             fields
           )
           .then(() => {

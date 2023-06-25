@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { SetLocal } from "../../Utils/localstorage";
-import Loading from "../Cart_acc_ext/Loading";
+import Loading from "../Loading/Loading";
 import swal from "sweetalert"
 
 function Login() {
@@ -18,7 +18,7 @@ function Login() {
     if (email !== "" && password !== "") {
       setload(true);
       axios
-        .post("https://repulsive-nightgown-colt.cyclic.app/users/login", {
+        .post("https://average-wrap-eel.cyclic.app/users/login", {
           email,
           password,
         })
